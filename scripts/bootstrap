@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+echo "Install Chef Client Package"
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+
+echo "Install bundler"
+gem install bundler
+
+echo "Install required gems"
+bundle check || bundle install
